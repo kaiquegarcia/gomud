@@ -3,7 +3,8 @@
 ## Usage
 
 1. Build the software with `go build .`
-2. Execute it on CLI
+2. Prepare the `.env` (you can copy from `.env.example` and change to match production values)
+3. Execute it on CLI
 
 ## Available Commands
 
