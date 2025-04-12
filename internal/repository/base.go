@@ -72,7 +72,7 @@ func (r *base) update(ctx context.Context, entity any, ID int) (*mysql.Result, e
 	}
 
 	fields.Values = append(fields.Values, ID)
-	sql := fmt.Sprintf("UPDATE %s SET %s WHERE ID=?", r.table, sqlSet)
+	sql := fmt.Sprintf("UPDATE %s SET %s WHERE ID=?", r.table, strings.Join(sqlSet, ", "))
 	return r.query(ctx, sql, fields.Values...)
 }
 
